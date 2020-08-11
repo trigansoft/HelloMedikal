@@ -16,8 +16,8 @@ import {
   StatusBar,
 } from 'react-native';
 import SplashScreen from 'react-native-splash-screen'
-
-import { AppIntro } from "@containers"
+import 'react-native-gesture-handler';
+import Navigation from "@Navigation"
 function App() {
   useEffect(() => {
     SplashScreen.hide();
@@ -26,7 +26,7 @@ function App() {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView style={styles.container}>
-        <AppIntro />
+        <Navigation />
       </SafeAreaView>
     </>
   );

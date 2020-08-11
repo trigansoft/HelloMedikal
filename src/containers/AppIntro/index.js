@@ -14,7 +14,8 @@ import {
     View,
     Text,
     StatusBar,
-    Image
+    Image,
+    TouchableOpacity
 } from 'react-native';
 import AppIntroSlider from 'react-native-app-intro-slider';
 import styles from "./styles";
@@ -64,7 +65,11 @@ const slides = [
 ];
 
 
-function AppIntro() {
+function AppIntro(props) {
+    const { navigation } = props;
+    function onNavigate() {
+        navigation.push("InitialScreen")
+    }
     const _renderItem = ({ item }) => {
         return (
             <View style={{ flex: 1, }}>
@@ -97,16 +102,16 @@ function AppIntro() {
                     onDone={() => alert("Done")}
                     renderSkipButton={() => {
                         return (
-                            <View style={{ alignItems: 'center' }}>
+                            <TouchableOpacity style={{ alignItems: 'center' }} onPress={() => onNavigate()} >
                                 <Text style={styles.skip}>Skip</Text>
-                            </View>
+                            </TouchableOpacity>
                         )
                     }}
                     renderDoneButton={() => {
                         return (
-                            <View style={{ alignItems: 'center' }}>
+                            <TouchableOpacity style={{ alignItems: 'center' }} onPress={() => onNavigate()} >
                                 <Text style={styles.skip}>Done</Text>
-                            </View>
+                            </TouchableOpacity>
                         )
                     }} />
             </View>
