@@ -23,7 +23,7 @@ function InitialScreen(props) {
     }, []);
 
     const signInPage = () => {
-         
+
          props.navigation.push('SignIn');
     }
 
