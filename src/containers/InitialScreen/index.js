@@ -24,11 +24,11 @@ function InitialScreen(props) {
 
     const signInPage = () => {
 
-         props.navigation.push('SignIn');
+        props.navigation.push('SignIn');
     }
 
     const signUpPage = () => {
-        
+        props.navigation.push('SignUp');
     }
 
     const exploreGuest = () => {
@@ -44,15 +44,15 @@ function InitialScreen(props) {
                 <Text style={styles.text}>Welcome to the {"\n"} Hellomedikal app</Text>
             </View>
             <View style={{ flex: 0.1, flexDirection: 'row', alignItems: 'center', paddingHorizontal: 25, }} >
-                <TouchableOpacity style={styles.signInButton} onPress={()=>{signInPage()}}>
+                <TouchableOpacity style={styles.signInButton} onPress={() => { signInPage() }}>
                     <Text style={styles.signIn} >SIGN IN</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.signUpButton} onPress={()=>{signUpPage()}}>
+                <TouchableOpacity style={styles.signUpButton} onPress={() => { signUpPage() }}>
                     <Text style={styles.signUp}>SIGN UP</Text>
                 </TouchableOpacity>
             </View>
             <View style={{ flex: 0.1, justifyContent: 'center', alignItems: 'center' }} >
-                <TouchableOpacity style={{ borderBottomWidth: 1, borderColor: 'black' }} onPress={()=>{exploreGuest()}}>
+                <TouchableOpacity style={{ borderBottomWidth: 1, borderColor: 'black' }} onPress={() => { exploreGuest() }}>
                     <Text style={styles.guest}>Explore as Guest</Text>
                 </TouchableOpacity>
             </View>
