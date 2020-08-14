@@ -39,7 +39,9 @@ export default function SignUpWithEmail(props) {
                         keyboardType="email-address"
                         returnKeyType="done"
                         value={email}
+                        autoCapitalize={'none'}
                         onChangeText={(text) => setEmail(text)}
+                        onEndEditing={() => props.getEmail(email)}
                     />
                     <Image source={Images.email} style={styles.icon} />
                 </View>

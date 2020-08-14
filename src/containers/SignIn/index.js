@@ -7,6 +7,7 @@ import styles from './styles';
 
 
 export default function SignIn(props) {
+    const { navigation } = props;
     let { please_login_your_account, enter_your_info_account } = Strings;
 
     useEffect(() => {
@@ -16,7 +17,7 @@ export default function SignIn(props) {
 
     }
     const signUp = () => {
-
+        navigation.push("SignUp")
     }
     return (
         <View style={styles.container}>

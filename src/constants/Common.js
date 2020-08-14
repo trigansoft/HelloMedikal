@@ -1,6 +1,6 @@
 import { Images } from "@constants";
 const common = {
-  API_BASE_URL: "https://projects.yellowsoft.in/all3abb/app",
+  API_BASE_URL: "",
   HEADER_HEIGHT: 64,
 
 };

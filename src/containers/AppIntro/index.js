@@ -83,7 +83,7 @@ function AppIntro(props) {
         );
     }
     return (
-        <View style={{ flex: 1 }}>
+        <View style={{ flex: 1, backgroundColor: 'white' }}>
             {/* <Text>hsghg</Text> */}
             <View style={{ flex: 0.2, alignItems: 'center', justifyContent: 'center' }}>
                 <Image source={require("@Images/logo.png")} />

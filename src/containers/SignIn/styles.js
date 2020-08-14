@@ -4,6 +4,7 @@ import { Colors } from '@constants'
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        backgroundColor: 'white',
         justifyContent: 'flex-start'
         // alignContent:'center'
     },

@@ -156,7 +156,8 @@ const styles = StyleSheet.create({
         marginTop: 20,
         letterSpacing: 1,
         lineHeight: 20,
-    }
+    },
+    lock: { height: 20, width: 20, tintColor: "grey" }
 })
 
 export default styles;

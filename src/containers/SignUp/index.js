@@ -11,13 +11,37 @@ import SignUpWithEmail from "./SignUpWithEmail"
 import SignUpWithPhone from "./SignUpWithPhone"
 
 export default function SignUp(props) {
+  const { navigation } = props;
   const [selectedIndex, setSelectedIndex] = useState(0)
   const [modalVisible, setModalVisible] = useState(false);
-
-  handleIndexChange = index => {
+  const [email, setEmail] = useState("")
+  const [phone, setPhone] = useState("")
+  const handleIndexChange = index => {
     // console.log(index, "-----")
     setSelectedIndex(index)
   };
+  function getValue(value) {
+    if (selectedIndex === 0) {
+      setEmail(value)
+    } else {
+      setPhone(value)
+    }
+    // console.log(value, "====value====")
+  }
+  function onSubmit() {
+    if (selectedIndex === 0 && !email) {
+      alert("Please enter email")
+    } else if (selectedIndex === 1 && !phone) {
+      alert("Please enter phone number")
+    } else {
+      navigation.push("Otp", { value: selectedIndex ? phone : email, selectedIndex })
+      // if (selectedIndex === 0 && !email) {
+      //   alert("Please enter email")
+      // } else if (selectedIndex === 1 && !phone) {
+      //   alert("Please enter phone number")
+      // }
+    }
+  }
   return (
     <View style={styles.container}>
       <View style={styles.topView}>
@@ -38,23 +62,22 @@ export default function SignUp(props) {
       </View>
       <View style={styles.inputView}>
         {selectedIndex === 0 ? (
-          <SignUpWithEmail />
+          <SignUpWithEmail getEmail={getValue} />
         ) : (
-            <SignUpWithPhone />
+            <SignUpWithPhone getNumber={getValue} />
           )}
-
       </View>
 
       <View style={styles.emptyView} />
       <View style={styles.buttonView} >
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={onSubmit}>
           <Text style={styles.buttonText}>Register</Text>
         </TouchableOpacity>
       </View>
       <View style={styles.emptyView} />
       <View style={styles.bottomView} >
         <View style={styles.iconView}>
-          <Image source={Images.lock} style={{ height: 20, width: 20, tintColor: "grey" }} />
+          <Image source={Images.lock} style={styles.lock} />
         </View>
         <View style={styles.bottomTextView}>
           <TouchableOpacity onPress={() => setModalVisible(true)}>

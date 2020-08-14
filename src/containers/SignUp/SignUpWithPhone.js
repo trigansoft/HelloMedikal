@@ -10,6 +10,7 @@ import { Images } from '@constants';
 
 export default function SignUpWithPhone(props) {
     const [country, setCountry] = useState({ "callingCode": ["1"], "cca2": "US", "currency": ["USD"], "flag": "flag-us", "name": "United States", "region": "Americas", "subregion": "North America" })
+    const [phone, setPhone] = useState("")
     useEffect(() => {
         // getAllCountries().then((countries) => {
         //     const countryyy = countries.find((c) => (c.cca2 === countryCode));
@@ -42,6 +43,12 @@ export default function SignUpWithPhone(props) {
                         style={styles.numberInput}
                         keyboardType="number-pad"
                         returnKeyType="done"
+                        onChangeText={(text) => { setPhone(text) }}
+                        value={phone}
+                        maxLength={10}
+                        onEndEditing={() => {
+                            props.getNumber("+" + country.callingCode[0] + "-" + phone)
+                        }}
                     />
                     <Image source={Images.phone} style={styles.icon} />
                 </View>
