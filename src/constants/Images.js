@@ -19,5 +19,8 @@ const images = {
     call: require("@Images/call.png"),
     check: require("@Images/check.png"),
     uncheck: require("@Images/uncheck.png"),
+    dropdown: require("@Images/dropdown.png"),
+    filter: require("@Images/filter.png"),
+    pin: require("@Images/select.png"),
 };
 export default images;

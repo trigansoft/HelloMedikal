@@ -49,6 +49,7 @@ export default function RegisterForm(props) {
                                 marginLeft: key === 0 ? 0 : 20, marginRight: key === 1 ? 0 : 20
                             }]} onPress={() => setGender(res)}>
                                 {gender.id === res.id ? (
+
                                     <Image source={res.selectedImage} />
                                 ) : (
                                         <Image source={res.image} />
