@@ -9,7 +9,7 @@ const Stack = createStackNavigator();
 function Navigation() {
     return (
         <NavigationContainer>
-            <Stack.Navigator initialRouteName="FilterScreen" screenOptions={{
+            <Stack.Navigator initialRouteName="AppIntro" screenOptions={{
                 headerShown: false
             }}>
                 <Stack.Screen name="AppIntro" component={AppIntro} />
