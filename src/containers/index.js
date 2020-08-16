@@ -5,3 +5,5 @@ export { default as SignUp } from './SignUp';
 export { default as Otp } from './Otp';
 export { default as RegisterForm } from './RegisterForm';
 export { default as FilterScreen } from './FilterScreen';
+export { default as AdvanceSearch } from './AdvanceSearch';
+export { default as SearchResults } from './SearchResults';

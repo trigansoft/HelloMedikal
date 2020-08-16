@@ -22,5 +22,11 @@ const images = {
     dropdown: require("@Images/dropdown.png"),
     filter: require("@Images/filter.png"),
     pin: require("@Images/select.png"),
+    downArrow: require("@Images/downArrow.png"),
+    square: require("@Images/square.png"),
+    checkBox: require("@Images/checkBox.png"),
+    heart: require("@Images/heart.png"),
+    emptyStar: require("@Images/emptyStar.png"),
+    star: require("@Images/star.png"),
 };
 export default images;

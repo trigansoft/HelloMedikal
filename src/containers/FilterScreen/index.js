@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import { View, Text, ScrollView, TouchableOpacity, Image, TextInput, Modal } from 'react-native'
 import styles from "./styles";
 import { Images } from '@constants'
-import { Logo } from '@components'
-import FilterModal from "./FilterModal"
+import { Logo, FilterModal } from '@components'
+// import FilterModal from "./FilterModal"
 export default function FilterScreen(props) {
     const [modalVisible, setModalVisible] = useState(false);
     return (
