@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import SegmentedControlTab from "react-native-segmented-control-tab";
-import { View, Text, TextInput, TouchableOpacity, Image, Modal, ScrollView } from 'react-native';
+import { View, Text, Alert, TouchableOpacity, Image, Modal, ScrollView } from 'react-native';
 import {
   TextField,
 } from '@ubaids/react-native-material-textfield';
@@ -26,13 +26,13 @@ export default function SignUp(props) {
     } else {
       setPhone(value)
     }
-    // console.log(value, "====value====")
+     console.log(value, "====value====")
   }
   function onSubmit() {
     if (selectedIndex === 0 && !email) {
-      alert("Please enter email")
+      Alert.alert('Hello Medikal', "Please enter email")
     } else if (selectedIndex === 1 && !phone) {
-      alert("Please enter phone number")
+      Alert.alert('Hello Medikal', "Please enter phone number")
     } else {
       navigation.push("Otp", { value: selectedIndex ? phone : email, selectedIndex })
       // if (selectedIndex === 0 && !email) {
