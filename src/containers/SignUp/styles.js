@@ -21,7 +21,8 @@ const styles = StyleSheet.create({
 
         borderWidth: 1.2,
         borderColor: "grey",
-        margin: 10
+        margin: 10,
+        backgroundColor: 'grey'
     },
     account: {
         marginHorizontal: 10,
@@ -56,7 +57,7 @@ const styles = StyleSheet.create({
     text: {
         color: "#3D3D3B",
         fontSize: 14,
-        // marginTop: 5,
+        marginTop: 5,
         fontWeight: '600'
     },
     bottomText: {
@@ -64,11 +65,11 @@ const styles = StyleSheet.create({
         fontSize: 14,
         textAlign: 'center'
     },
-    logoView: { flex: 0.2, },
-    inputView: { flex: 0.3 },
+    logoView: { marginVertical: 20 },
+    inputView: { marginVertical: 20 },
     emptyView: { flex: 0.1, },
     buttonView: {
-        flex: 0.1,
+        marginVertical: 20,
         alignItems: 'center',
         justifyContent: 'center',
         marginLeft: 10,
@@ -76,18 +77,18 @@ const styles = StyleSheet.create({
         // backgroundColor: 'lightblue'
     },
     bottomView: {
-        flex: 0.1,
+        marginVertical: 20,
         flexDirection: 'row',
         paddingHorizontal: 10
 
     },
-    topView: { flex: 0.1, marginHorizontal: 20, justifyContent: 'center' },
+    topView: { marginVertical: 20, marginHorizontal: 20, justifyContent: 'center' },
     iconView: { flex: 0.1, justifyContent: 'center', alignItems: 'center' },
     bottomTextView: { flex: 0.9, alignItems: 'center', justifyContent: 'center', flexDirection: 'row' },
-    view: { flex: 0.33, justifyContent: 'center' },
+    view: { marginVertical: 30, justifyContent: 'center' },
     emptyContent: { flex: 0.27, },
     inputContainer: {
-        flex: 0.3,
+        marginVertical: 30,
         marginHorizontal: 10,
         justifyContent: 'flex-end',
         // backgroundColor: 'yellow'
