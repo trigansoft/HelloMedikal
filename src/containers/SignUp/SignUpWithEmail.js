@@ -28,7 +28,6 @@ export default function SignUpWithEmail(props) {
                 <View style={styles.borderView} />
                 <Text style={styles.account}>Create New Account via Email</Text>
             </View>
-            <View style={styles.emptyContent} />
             <View style={styles.inputContainer}>
                 <Text style={styles.placeholder}>Email Address</Text>
                 <View style={styles.textInputView}>
@@ -42,13 +41,13 @@ export default function SignUpWithEmail(props) {
                         autoCapitalize={'none'}
                         onChangeText={(text) => setEmail(text)}
                         onEndEditing={() => props.getEmail(email)}
+                        onSubmitEditing={() => props.getEmail(email)}
                     />
                     <Image source={Images.email} style={styles.icon} />
                 </View>
-            </View>
-            <View style={styles.textView}>
                 <Text style={styles.text}>Confirmation code to be sent on your email</Text>
             </View>
+
 
 
         </View>
