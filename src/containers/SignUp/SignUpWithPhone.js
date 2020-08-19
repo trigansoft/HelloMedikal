@@ -55,10 +55,9 @@ export default function SignUpWithPhone(props) {
                     />
                     <Image source={Images.phone} style={styles.icon} />
                 </View>
-            </View>
-            <View style={styles.textView}>
                 <Text style={styles.text}>Confirmation code to be sent on your mobile number</Text>
             </View>
+
 
         </View>
     )
