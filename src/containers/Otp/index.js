@@ -22,7 +22,7 @@ export default function Otp(props) {
     return (
         <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
             <View style={styles.container}>
-                <View style={{ height: 64, justifyContent: 'center' }} >
+                <View style={{ height: 64, justifyContent: 'center', }} >
                     <TouchableOpacity onPress={() => navigation.pop()}>
                         <Image source={Images.back} style={{ marginLeft: 15 }} />
                     </TouchableOpacity>

@@ -49,6 +49,9 @@ export default function SignUpWithPhone(props) {
                         onEndEditing={() => {
                             props.getNumber("+" + country.callingCode[0] + "-" + phone)
                         }}
+                        onSubmitEditing={() => {
+                            props.getNumber("+" + country.callingCode[0] + "-" + phone)
+                        }}
                     />
                     <Image source={Images.phone} style={styles.icon} />
                 </View>
